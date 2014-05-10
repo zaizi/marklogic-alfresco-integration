@@ -34,4 +34,6 @@ public interface MarkLogicPublishingModel
     public static final QName TYPE_DELIVERY_CHANNEL = QName.createQName(NAMESPACE, "DeliveryChannel");
 
     public static final QName ASPECT_DELIVERY_CHANNEL = QName.createQName(NAMESPACE, "DeliveryChannelAspect");
+    public static final String PUBLISH_URI_KEY = "alfrescopub/publish";
+    public static final String UNPUBLISH_URI_KEY = "alfrescopub/unpublish";
 }
