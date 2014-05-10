@@ -141,7 +141,7 @@ public class MarkLogicChannelType extends AbstractChannelType
                     log.debug("Publishing node: " + nodeToPublish);
                 }
 
-                URI uriPut = publishingHelper.getURIFromNodeRefAndChannelProperties(nodeToPublish, channelProperties);
+                URI uriPut = publishingHelper.getPutURIFromNodeRefAndChannelProperties(nodeToPublish, channelProperties);
 
                 HttpPut httpput = new HttpPut(uriPut);
                 FileEntity filenEntity = new FileEntity(contentFile, MimetypeMap.MIMETYPE_XML);
@@ -194,7 +194,7 @@ public class MarkLogicChannelType extends AbstractChannelType
                 log.debug("Unpublishing node: " + nodeToUnpublish);
             }
 
-            URI uriDelete = publishingHelper.getURIFromNodeRefAndChannelProperties(nodeToUnpublish, channelProperties);
+            URI uriDelete = publishingHelper.getDeleteURIFromNodeRefAndChannelProperties(nodeToUnpublish, channelProperties);
 
             HttpDelete httpDelete = new HttpDelete(uriDelete);
 
